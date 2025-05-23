@@ -5,11 +5,22 @@ class Parser:
     def get_literal(self):
         return self.lexer.get_token()
 
-    def expression(self):
+    def term(self):
         left = self.get_literal()
-        while self.lexer.peek_token() == '+' or self.lexer.peek_token() == '-':
+        while self.lexer.peek_token() == '*' or self.lexer.peek_token() == '/':
             op = self.lexer.get_token()
             right = self.get_literal()
+            if op == '*':
+                left *= right
+            else:
+                left /= right
+        return left
+
+    def expression(self):
+        left = self.term()
+        while self.lexer.peek_token() == '+' or self.lexer.peek_token() == '-':
+            op = self.lexer.get_token()
+            right = self.term()
             if op == '+':
                 left += right
             else:
