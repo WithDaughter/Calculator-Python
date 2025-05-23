@@ -7,7 +7,7 @@ class Parser:
 
     def plus(self):
         left = self.get_literal()
-        if self.lexer.peek_token() == '+':
+        while self.lexer.peek_token() == '+':
             op = self.lexer.get_token()
             right = self.get_literal()
             left += right
