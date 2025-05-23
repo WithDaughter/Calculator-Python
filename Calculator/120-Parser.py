@@ -3,7 +3,9 @@ from Lexer import Lexer
 
 def calc(exp):
     lexer = Lexer(exp)
-    val = lexer.get_token()
+    # val = lexer.get_token()
+    while (val := lexer.get_token()) != Lexer.EOF:
+        print(val)
     return val
 
 
