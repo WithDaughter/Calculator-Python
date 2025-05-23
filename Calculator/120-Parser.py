@@ -1,5 +1,9 @@
+from Lexer import Lexer
+
+
 def calc(exp):
-    val = exp
+    lexer = Lexer(exp)
+    val = lexer.get_token()
     return val
 
 
