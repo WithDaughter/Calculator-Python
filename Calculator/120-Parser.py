@@ -5,11 +5,11 @@ from Parser import Parser
 def calc(exp):
     lexer = Lexer(exp)
     parser = Parser(lexer)
-    val = parser.plus()
+    val = parser.expression()
     return val
 
 
 if __name__ == '__main__':
-    exp = '3 + 2 + 1'
+    exp = '3 -2-5'
     val = calc(exp)
     print(val)
