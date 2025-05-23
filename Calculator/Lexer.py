@@ -10,9 +10,15 @@ class Lexer:
         tokens = deque()
         for ch in list(exp):
             if ch in ' \t\n': continue
-            tokens.append(ch)
+            if ch in '+-*/()':
+                tokens.append(ch)
+            else:
+                tokens.append(int(ch))
         tokens.append(Lexer.EOF)
         return tokens
+
+    def peek_token(self):
+        return self.tokens[0]
 
     def get_token(self):
         return self.tokens.popleft()

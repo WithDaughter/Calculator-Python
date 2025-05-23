@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb74bcb4-4de2-4386-8757-8fb23c6f2166" name="Changes" comment="120-Parser 시작">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/120-Parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator/120-Parser.py" afterDir="false" />
-    </list>
+    <list default="true" id="cb74bcb4-4de2-4386-8757-8fb23c6f2166" name="Changes" comment="Lexer: 공백 제거, EOF" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,6 +46,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.120-Parser.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -62,7 +60,30 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.120-Parser">
+    <configuration name="120-Parser" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Calculator-Python" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Calculator" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Calculator/120-Parser.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Calculator-Python" />
       <option name="ENV_FILES" value="" />
@@ -88,6 +109,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.120-Parser" />
         <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
@@ -107,7 +129,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1748017756766</updated>
-      <workItem from="1748017757814" duration="1412000" />
+      <workItem from="1748017757814" duration="3374000" />
     </task>
     <task id="LOCAL-00001" summary="파이썬으로 만드는 계산기 시작">
       <option name="closed" value="true" />
@@ -125,7 +147,31 @@
       <option name="project" value="LOCAL" />
       <updated>1748018736862</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="calc 함수">
+      <option name="closed" value="true" />
+      <created>1748019471175</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1748019471175</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Lexer 클래스">
+      <option name="closed" value="true" />
+      <created>1748020324997</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1748020324997</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Lexer: 공백 제거, EOF">
+      <option name="closed" value="true" />
+      <created>1748021123720</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1748021123720</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,7 +191,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="파이썬으로 만드는 계산기 시작" />
     <MESSAGE value="120-Parser 시작" />
-    <option name="LAST_COMMIT_MESSAGE" value="120-Parser 시작" />
+    <MESSAGE value="calc 함수" />
+    <MESSAGE value="Lexer 클래스" />
+    <MESSAGE value="Lexer: 공백 제거, EOF" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lexer: 공백 제거, EOF" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -160,5 +209,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Calculator_Python$main.coverage" NAME="main Coverage Results" MODIFIED="1748018639153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Calculator_Python$120_Parser.coverage" NAME="120-Parser Coverage Results" MODIFIED="1748021049459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Calculator" />
   </component>
 </project>
