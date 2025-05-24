@@ -14,33 +14,40 @@ class Lexer:
         return ch in '0123456789'
 
     def get_number(self):
-        num = self.exp[self.cursor]
-        while (self.cursor + 1 < len(self.exp)
-                and Lexer.is_number(self.exp[self.cursor + 1])):
-            self.cursor += 1
-            num += self.exp[self.cursor]
-        if (self.cursor + 1 < len(self.exp)
-               and self.exp[self.cursor + 1] != '.'):
+        num = self.get_char()
+        while self.is_number(self.peek_char()):
+            self.next_char()
+            num += self.get_char()
+        if self.peek_char() != '.':
             return int(num)
-        self.cursor += 1
-        num += '.'
-        while (self.cursor + 1 < len(self.exp)
-               and Lexer.is_number(self.exp[self.cursor + 1])):
-            self.cursor += 1
-            num += self.exp[self.cursor]
+        self.next_char()
+        num += self.get_char()
+        while self.is_number(self.peek_char()):
+            self.next_char()
+            num += self.get_char()
         return float(num)
 
     def get_asterisk(self):
-        asterisk = self.exp[self.cursor]
-        if (self.cursor + 1 < len(self.exp)
-                and self.exp[self.cursor + 1] == '*'):
-            self.cursor += 1
-            asterisk += self.exp[self.cursor]
+        asterisk = self.get_char()
+        if self.peek_char() == '*':
+            self.next_char()
+            asterisk += self.get_char()
         return asterisk
+
+    def peek_char(self):
+        if self.cursor + 1 < len(self.exp):
+            return self.exp[self.cursor + 1]
+        return Lexer.EOF
+
+    def get_char(self):
+        return self.exp[self.cursor]
+
+    def next_char(self):
+        self.cursor += 1
 
     def tokenize(self):
         while self.cursor < len(self.exp):
-            ch = self.exp[self.cursor]
+            ch = self.get_char()
             if ch in ' \t\n':
                 pass
             elif ch in '+-/()':
@@ -49,7 +56,7 @@ class Lexer:
                 self.tokens.append(self.get_asterisk())
             elif Lexer.is_number(ch):
                 self.tokens.append(self.get_number())
-            self.cursor += 1
+            self.next_char()
         self.tokens.append(Lexer.EOF)
 
     def peek_token(self):
