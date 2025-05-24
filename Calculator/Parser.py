@@ -12,6 +12,10 @@ class Parser:
             if self.lexer.get_token() != ')':
                 raise SyntaxError(')가 없습니다.')
             return val
+        elif self.lexer.peek_token() == '-':
+            self.lexer.get_token()
+            val = self.lexer.get_token()
+            return -val
         else:
             return self.lexer.get_token()
 
