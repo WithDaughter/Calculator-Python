@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb74bcb4-4de2-4386-8757-8fb23c6f2166" name="Changes" comment="()">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="cb74bcb4-4de2-4386-8757-8fb23c6f2166" name="Changes" comment="-">
       <change beforePath="$PROJECT_DIR$/Calculator/120-Parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator/120-Parser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Calculator/Lexer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator/Lexer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/Parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator/Parser.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +132,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1748017756766</updated>
-      <workItem from="1748017757814" duration="19923000" />
+      <workItem from="1748017757814" duration="21145000" />
     </task>
     <task id="LOCAL-00001" summary="파이썬으로 만드는 계산기 시작">
       <option name="closed" value="true" />
@@ -232,7 +230,23 @@
       <option name="project" value="LOCAL" />
       <updated>1748032487315</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="**">
+      <option name="closed" value="true" />
+      <created>1748076358185</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1748076358185</updated>
+    </task>
+    <task id="LOCAL-00014" summary="-">
+      <option name="closed" value="true" />
+      <created>1748076703460</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1748076703460</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,7 +276,9 @@
     <MESSAGE value="숫자 123" />
     <MESSAGE value="term: * /" />
     <MESSAGE value="()" />
-    <option name="LAST_COMMIT_MESSAGE" value="()" />
+    <MESSAGE value="**" />
+    <MESSAGE value="-" />
+    <option name="LAST_COMMIT_MESSAGE" value="-" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -277,6 +293,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Calculator_Python$main.coverage" NAME="main Coverage Results" MODIFIED="1748018639153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Calculator_Python$120_Parser.coverage" NAME="120-Parser Coverage Results" MODIFIED="1748076197110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Calculator" />
+    <SUITE FILE_PATH="coverage/Calculator_Python$120_Parser.coverage" NAME="120-Parser Coverage Results" MODIFIED="1748077444479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Calculator" />
   </component>
 </project>

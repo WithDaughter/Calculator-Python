@@ -19,7 +19,16 @@ class Lexer:
                 and Lexer.is_number(self.exp[self.cursor + 1])):
             self.cursor += 1
             num += self.exp[self.cursor]
-        return int(num)
+        if (self.cursor + 1 < len(self.exp)
+               and self.exp[self.cursor + 1] != '.'):
+            return int(num)
+        self.cursor += 1
+        num += '.'
+        while (self.cursor + 1 < len(self.exp)
+               and Lexer.is_number(self.exp[self.cursor + 1])):
+            self.cursor += 1
+            num += self.exp[self.cursor]
+        return float(num)
 
     def get_asterisk(self):
         asterisk = self.exp[self.cursor]
