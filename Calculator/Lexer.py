@@ -21,13 +21,23 @@ class Lexer:
             num += self.exp[self.cursor]
         return int(num)
 
+    def get_asterisk(self):
+        asterisk = self.exp[self.cursor]
+        if (self.cursor + 1 < len(self.exp)
+                and self.exp[self.cursor + 1] == '*'):
+            self.cursor += 1
+            asterisk += self.exp[self.cursor]
+        return asterisk
+
     def tokenize(self):
         while self.cursor < len(self.exp):
             ch = self.exp[self.cursor]
             if ch in ' \t\n':
                 pass
-            elif ch in '+-*/()':
+            elif ch in '+-/()':
                 self.tokens.append(ch)
+            elif ch == '*':
+                self.tokens.append(self.get_asterisk())
             elif Lexer.is_number(ch):
                 self.tokens.append(self.get_number())
             self.cursor += 1

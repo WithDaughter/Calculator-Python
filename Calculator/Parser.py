@@ -1,3 +1,6 @@
+import math
+
+
 class Parser:
     def __init__(self, lexer):
         self.lexer = lexer
@@ -12,11 +15,19 @@ class Parser:
         else:
             return self.lexer.get_token()
 
-    def term(self):
+    def get_secondary(self):
         left = self.get_factor()
-        while self.lexer.peek_token() == '*' or self.lexer.peek_token() == '/':
+        while self.lexer.peek_token() == '**':
             op = self.lexer.get_token()
             right = self.get_factor()
+            left = math.pow(left, right)
+        return left
+
+    def term(self):
+        left = self.get_secondary()
+        while self.lexer.peek_token() == '*' or self.lexer.peek_token() == '/':
+            op = self.lexer.get_token()
+            right = self.get_secondary()
             if op == '*':
                 left *= right
             else:

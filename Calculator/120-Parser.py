@@ -10,6 +10,6 @@ def calc(exp):
 
 
 if __name__ == '__main__':
-    exp = '((3 -2) + 2) *(2 + (1 + 2))'
+    exp = '2*2** ( 1+1) **2*(1 + 1)'
     val = calc(exp)
     print(val)
